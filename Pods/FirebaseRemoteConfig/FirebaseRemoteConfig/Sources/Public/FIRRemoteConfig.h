@@ -192,11 +192,11 @@ NS_SWIFT_NAME(RemoteConfig)
 /// Fetches Remote Config data with a callback. Call activateFetched to make fetched data available
 /// to your app.
 ///
-/// Note: This method uses a Firebase Instance ID token to identify the app instance, and once it's
-/// called, it periodically sends data to the Firebase backend. (see
-/// `[FIRInstanceID getIDWithHandler:]`).
-/// To stop the periodic sync, developers need to call `[FIRInstanceID deleteIDWithHandler:]` and
-/// avoid calling this method again.
+/// Note: This method uses a Firebase Installations token to identify the app instance, and once
+/// it's called, it periodically sends data to the Firebase backend. (see
+/// `[FIRInstallations authTokenWithCompletion:]`).
+/// To stop the periodic sync, developers need to call `[FIRInstallations deleteWithCompletion:]`
+/// and avoid calling this method again.
 ///
 /// @param completionHandler Fetch operation callback.
 - (void)fetchWithCompletionHandler:(nullable FIRRemoteConfigFetchCompletion)completionHandler;
@@ -204,11 +204,11 @@ NS_SWIFT_NAME(RemoteConfig)
 /// Fetches Remote Config data and sets a duration that specifies how long config data lasts.
 /// Call activateFetched to make fetched data available to your app.
 ///
-/// Note: This method uses a Firebase Instance ID token to identify the app instance, and once it's
-/// called, it periodically sends data to the Firebase backend. (see
-/// `[FIRInstanceID getIDWithHandler:]`).
-/// To stop the periodic sync, developers need to call `[FIRInstanceID deleteIDWithHandler:]` and
-/// avoid calling this method again.
+/// Note: This method uses a Firebase Installations token to identify the app instance, and once
+/// it's called, it periodically sends data to the Firebase backend. (see
+/// `[FIRInstallations authTokenWithCompletion:]`).
+/// To stop the periodic sync, developers need to call `[FIRInstallations deleteWithCompletion:]`
+/// and avoid calling this method again.
 ///
 /// @param expirationDuration  Override the (default or optionally set minimumFetchInterval property
 /// in FIRRemoteConfigSettings) minimumFetchInterval for only the current request, in seconds.
@@ -220,11 +220,11 @@ NS_SWIFT_NAME(RemoteConfig)
 /// Fetches Remote Config data and if successful, activates fetched data. Optional completion
 /// handler callback is invoked after the attempted activation of data, if the fetch call succeeded.
 ///
-/// Note: This method uses a Firebase Instance ID token to identify the app instance, and once it's
-/// called, it periodically sends data to the Firebase backend. (see
-/// `[FIRInstanceID getIDWithHandler:]`).
-/// To stop the periodic sync, developers need to call `[FIRInstanceID deleteIDWithHandler:]` and
-/// avoid calling this method again.
+/// Note: This method uses a Firebase Installations token to identify the app instance, and once
+/// it's called, it periodically sends data to the Firebase backend. (see
+/// `[FIRInstallations authTokenWithCompletion:]`).
+/// To stop the periodic sync, developers need to call `[FIRInstallations deleteWithCompletion:]`
+/// and avoid calling this method again.
 ///
 /// @param completionHandler Fetch operation callback.
 - (void)fetchAndActivateWithCompletionHandler:
@@ -234,16 +234,22 @@ NS_SWIFT_NAME(RemoteConfig)
 
 /// Applies Fetched Config data to the Active Config, causing updates to the behavior and appearance
 /// of the app to take effect (depending on how config data is used in the app).
+/// @param completion Activate operation callback with changed and error parameters.
+- (void)activateWithCompletion:(void (^_Nullable)(BOOL changed,
+                                                  NSError *_Nullable error))completion;
+
+/// Applies Fetched Config data to the Active Config, causing updates to the behavior and appearance
+/// of the app to take effect (depending on how config data is used in the app).
 /// @param completionHandler Activate operation callback.
-- (void)activateWithCompletionHandler:(nullable FIRRemoteConfigActivateCompletion)completionHandler;
+- (void)activateWithCompletionHandler:(nullable FIRRemoteConfigActivateCompletion)completionHandler
+    DEPRECATED_MSG_ATTRIBUTE("Use -[FIRRemoteConfig activateWithCompletion:] instead.");
 
 /// This method is deprecated. Please use -[FIRRemoteConfig activateWithCompletionHandler:] instead.
 /// Applies Fetched Config data to the Active Config, causing updates to the behavior and appearance
 /// of the app to take effect (depending on how config data is used in the app).
 /// Returns true if there was a Fetched Config, and it was activated.
 /// Returns false if no Fetched Config was found, or the Fetched Config was already activated.
-- (BOOL)activateFetched DEPRECATED_MSG_ATTRIBUTE("Use -[FIRRemoteConfig activate] "
-                                                 "instead.");
+- (BOOL)activateFetched DEPRECATED_MSG_ATTRIBUTE("Use -[FIRRemoteConfig activate] instead.");
 
 #pragma mark - Get Config
 /// Enables access to configuration values by using object subscripting syntax.
@@ -265,8 +271,7 @@ NS_SWIFT_NAME(RemoteConfig)
 /// @param aNamespace       Config results under a given namespace.
 - (nonnull FIRRemoteConfigValue *)configValueForKey:(nullable NSString *)key
                                           namespace:(nullable NSString *)aNamespace
-    DEPRECATED_MSG_ATTRIBUTE("Use -[FIRRemoteConfig configValueForKey:] "
-                             "instead.");
+    DEPRECATED_MSG_ATTRIBUTE("Use -[FIRRemoteConfig configValueForKey:] instead.");
 
 /// Gets the config value of a given namespace and a given source.
 /// @param key              Config key.
@@ -281,8 +286,7 @@ NS_SWIFT_NAME(RemoteConfig)
 - (nonnull FIRRemoteConfigValue *)configValueForKey:(nullable NSString *)key
                                           namespace:(nullable NSString *)aNamespace
                                              source:(FIRRemoteConfigSource)source
-    DEPRECATED_MSG_ATTRIBUTE("Use -[FIRRemoteConfig configValueForKey:source:] "
-                             "instead.");
+    DEPRECATED_MSG_ATTRIBUTE("Use -[FIRRemoteConfig configValueForKey:source:] instead.");
 
 /// Gets all the parameter keys from a given source and a given namespace.
 ///
