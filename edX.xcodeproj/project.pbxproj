@@ -1883,7 +1883,7 @@
 		BE54F19A195F080E005D069F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		BE54F19B195F080E005D069F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		BE8163F51954244E00F9A2C5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		BECB7B0B1924C0C3009C77F1 /* CoopelescaCapacitacion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoopelescaCapacitacion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECB7B0B1924C0C3009C77F1 /* edX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECB7B0E1924C0C3009C77F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BECB7B101924C0C3009C77F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BECB7B121924C0C3009C77F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -3699,7 +3699,7 @@
 		BECB7B0C1924C0C3009C77F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BECB7B0B1924C0C3009C77F1 /* CoopelescaCapacitacion.app */,
+				BECB7B0B1924C0C3009C77F1 /* edX.app */,
 				BECB7B2C1924C0C3009C77F1 /* edXTests.xctest */,
 				77E6478E1C90C10300B6740D /* edXCore.framework */,
 				77E647971C90C10300B6740D /* edXCoreTests.xctest */,
@@ -4202,7 +4202,7 @@
 			);
 			name = edX;
 			productName = edXVideoLocker;
-			productReference = BECB7B0B1924C0C3009C77F1 /* CoopelescaCapacitacion.app */;
+			productReference = BECB7B0B1924C0C3009C77F1 /* edX.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BECB7B2B1924C0C3009C77F1 /* edXTests */ = {
@@ -5660,7 +5660,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CURRENT_PROJECT_VERSION = 2.24;
+				CURRENT_PROJECT_VERSION = 2.22.0;
 				DEVELOPMENT_TEAM = 87YSD7KU3T;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5682,10 +5682,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/OCMock",
 				);
-				MARKETING_VERSION = 2.24;
+				MARKETING_VERSION = 2.22;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = capacitacion.coopelesca.co.cr;
+				PRODUCT_BUNDLE_IDENTIFIER = capacitacion.coopelesca.co;
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -6119,7 +6119,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CURRENT_PROJECT_VERSION = 2.24;
+				CURRENT_PROJECT_VERSION = 2.22.0;
 				DEVELOPMENT_TEAM = 87YSD7KU3T;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6140,10 +6140,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/OCMock",
 				);
-				MARKETING_VERSION = 2.24;
+				MARKETING_VERSION = 2.22;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = capacitacion.coopelesca.co.cr;
+				PRODUCT_BUNDLE_IDENTIFIER = capacitacion.coopelesca.co;
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -6167,7 +6167,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CURRENT_PROJECT_VERSION = 2.24;
+				CURRENT_PROJECT_VERSION = 2.22.0;
 				DEVELOPMENT_TEAM = 87YSD7KU3T;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6189,10 +6189,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/OCMock",
 				);
-				MARKETING_VERSION = 2.24;
+				MARKETING_VERSION = 2.22;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = capacitacion.coopelesca.co.cr;
+				PRODUCT_BUNDLE_IDENTIFIER = capacitacion.coopelesca.co;
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
