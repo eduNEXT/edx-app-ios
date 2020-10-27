@@ -5685,7 +5685,7 @@
 				MARKETING_VERSION = 2.22;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.br.org.fit.tecnologia.educacao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mavim.academy;
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -6143,7 +6143,7 @@
 				MARKETING_VERSION = 2.22;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = org.br.org.fit.tecnologia.educacao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mavim.academy;
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -6192,7 +6192,7 @@
 				MARKETING_VERSION = 2.22;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.br.org.fit.tecnologia.educacao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mavim.academy;
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
